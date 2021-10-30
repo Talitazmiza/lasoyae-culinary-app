@@ -2,11 +2,11 @@
 
 1. install tailwindcss in ReactJS 
   
-   npm install -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
+   `npm install -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9`
    
 3. install and configure Craco with 
    
-   npm install @craco/craco
+   `npm install @craco/craco`
    
 3. update your `scripts` in your `package.json` file to use craco instead of react-scripts for all scripts except `eject`:
    
@@ -25,6 +25,7 @@
    "build": "craco build",
    
    "test": "craco test",
+   
    
 4. create a `craco.config.js`, add **tailwindcss** and **autoprefixer**
    
@@ -53,7 +54,7 @@
 
 5. generate your `tailwind.config.js` file with:
 
-   npx tailwindcss-cli@latest init
+   `npx tailwindcss-cli@latest init`
    
    
 6. it'll create `tailwind.config.js` file, then edit purge in this this file 
@@ -83,5 +84,5 @@ NOTE:
 
 if your **caniuse-lite is oudated** please run:
 
-npx browserslist@latest --update-db
+`npx browserslist@latest --update-db`
   
