@@ -78,4 +78,10 @@
 
    you're FINISHED, Happy Hacking!:)
 
+
+NOTE:
+
+if your **caniuse-lite is oudated** please run:
+
+npx browserslist@latest --update-db
   
