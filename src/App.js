@@ -1,12 +1,20 @@
+import React from 'react';
 import './App.css';
+import Landing from './Components/Landing';
+import Login from './Components/Login';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
-  return (
-    <div className="App">
-      <h1 className="text-blue-400 font-extrabold">Hello World!</h1>
-      <p className="tracking-widest">This is my first React App.</p>
-    </div>
-  );
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Switch>
+                    <Route path="/" exact component={Landing} />
+                    <Route path="/login" exact component={Login} />
+                </Switch>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
