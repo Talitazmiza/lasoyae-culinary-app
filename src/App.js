@@ -4,6 +4,7 @@ import Landing from './Components/Landing';
 import Login from './Components/Login';
 import Home from './Components/Home';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Register from "./Components/Register";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                     <Route path="/" exact component={Landing} />
                     <Route path="/login" exact component={Login} />
                     <Route path="/home" exact component={Home} />
+                    <Route path="/register" exact component={Register} />
                 </Switch>
             </BrowserRouter>
         </div>
