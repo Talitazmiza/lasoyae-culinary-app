@@ -80,6 +80,7 @@ const Register = () => {
                                             onChange={handleChange}
                                             type="password"
                                             placeholder="Password"
+                                            required
                                             className="input input-bordered border-base-100 bg-white"/>
                                     </div>
                                 </div>
@@ -117,6 +118,7 @@ const Register = () => {
                                             name="tinggi_badan"
                                             onChange={handleChange}
                                             type="number"
+                                            required
                                             placeholder="Tinggi badan (cm)"
                                             className="input input-bordered border-base-100 bg-white"/>
                                     </div>
