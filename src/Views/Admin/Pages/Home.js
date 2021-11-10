@@ -1,11 +1,9 @@
 import React, {useEffect} from 'react';
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import '../App.css';
+import '../../../App.css';
 import {connect, useDispatch, useSelector} from "react-redux";
-import {
-    getAllProducts
-} from "../Actions/products";
-import { logout } from "../Actions/auth";
+import { getAllProducts } from "../../../Actions/products";
+import { logout } from "../../../Actions/auth";
 
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';

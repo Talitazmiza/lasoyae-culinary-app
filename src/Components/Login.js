@@ -26,7 +26,7 @@ const Login = () => {
 
         dispatch(login(form))
             .then(() => {
-                return <Redirect to="/home" />;
+                return <Redirect to="/admin/home" />;
             })
             .catch(() => {
                 setLoading(false);
@@ -34,7 +34,7 @@ const Login = () => {
 
     };
     if (isLoggedIn) {
-        return <Redirect to="/home" />;
+        return <Redirect to="/admin/home" />;
     }
     return (
         <div className="hero min-h-screen bg-warning">
@@ -51,7 +51,7 @@ const Login = () => {
                                     type="email"
                                     placeholder="email"
                                     required
-                                    className="input input-bordered border-base-100 bg-white"/>
+                                    className="input input-bordered border-base-100 bg-white text-black"/>
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -61,9 +61,12 @@ const Login = () => {
                                     onChange={handleChange}
                                     type="password"
                                     placeholder="password"
-                                    className="input input-bordered border-base-100 bg-white"/>
+                                    className="input input-bordered border-base-100 bg-white text-black"/>
                                 <label className="label">
-                                    <a href="/" className="label-text-alt text-black">Forgot password?</a>
+                                    <a href="/" className="label-text-alt link link-hover text-black">Forgot password?</a>
+                                </label>
+                                <label className="label">
+                                    <p className="label-text-alt text-black">Don't have an account? <a href="/register" className="text-black">Regist here!</a></p>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
@@ -90,7 +93,7 @@ const Login = () => {
                                 </div>
                             )}
                         </form>
-                        <a href="/register" className="link link-hover">Daftar</a>
+                        {/*<a href="/register" className="link link-hover text-black">Regist</a>*/}
 
                     </div>
                 </div>
