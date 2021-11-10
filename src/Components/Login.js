@@ -49,6 +49,7 @@ const Login = () => {
                                 <input
                                     onChange={handleChange}
                                     type="email"
+                                    name="email"
                                     placeholder="email"
                                     required
                                     className="input input-bordered border-base-100 bg-white text-black"/>
@@ -59,7 +60,9 @@ const Login = () => {
                                 </label>
                                 <input
                                     onChange={handleChange}
+                                    name="password"
                                     type="password"
+                                    required
                                     placeholder="password"
                                     className="input input-bordered border-base-100 bg-white text-black"/>
                                 <label className="label">
