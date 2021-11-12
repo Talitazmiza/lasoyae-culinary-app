@@ -26,7 +26,7 @@ const Login = () => {
 
         dispatch(login(form))
             .then(() => {
-                return <Redirect to="/admin/home" />;
+                return <Redirect to="/customer/home" />;
             })
             .catch(() => {
                 setLoading(false);
@@ -34,7 +34,7 @@ const Login = () => {
 
     };
     if (isLoggedIn) {
-        return <Redirect to="/admin/home" />;
+        return <Redirect to="/customer/home" />;
     }
     return (
         <div className="hero min-h-screen bg-warning">

@@ -29,7 +29,7 @@ const Register = () => {
         setLoading(true);
         dispatch(register(form))
             .then(() => {
-                return <Redirect to="/home" />;
+                return <Redirect to="/customer/home" />;
             })
             .catch(() => {
                 setLoading(false);
@@ -37,7 +37,7 @@ const Register = () => {
 
     };
     if (isLoggedIn) {
-        return <Redirect to="/home" />;
+        return <Redirect to="/customer/home" />;
     }
     return (
         <div className="hero min-h-screen bg-warning">
@@ -57,7 +57,7 @@ const Register = () => {
                                             type="text"
                                             placeholder="Nama lengkap"
                                             required
-                                            className="input input-bordered border-base-100 bg-white"/>
+                                            className="input input-bordered border-base-100 bg-white text-black"/>
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
@@ -69,7 +69,7 @@ const Register = () => {
                                             type="email"
                                             placeholder="E-Mail"
                                             required
-                                            className="input input-bordered border-base-100 bg-white"/>
+                                            className="input input-bordered border-base-100 bg-white text-black"/>
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
@@ -81,7 +81,7 @@ const Register = () => {
                                             type="password"
                                             placeholder="Password"
                                             required
-                                            className="input input-bordered border-base-100 bg-white"/>
+                                            className="input input-bordered border-base-100 bg-white text-black"/>
                                     </div>
                                 </div>
 
@@ -96,7 +96,7 @@ const Register = () => {
                                             type="date"
                                             placeholder="Tanggal lahir"
                                             required
-                                            className="input input-bordered border-base-100 bg-white"/>
+                                            className="input input-bordered border-base-100 bg-white text-black"/>
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
@@ -108,11 +108,11 @@ const Register = () => {
                                             type="number"
                                             placeholder="Berat badan (Kg)"
                                             required
-                                            className="input input-bordered border-base-100 bg-white"/>
+                                            className="input input-bordered border-base-100 bg-white text-black"/>
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text text-black">Password</span>
+                                            <span className="label-text text-black">Tinggi Badan</span>
                                         </label>
                                         <input
                                             name="tinggi_badan"
@@ -120,7 +120,7 @@ const Register = () => {
                                             type="number"
                                             required
                                             placeholder="Tinggi badan (cm)"
-                                            className="input input-bordered border-base-100 bg-white"/>
+                                            className="input input-bordered border-base-100 bg-white text-black"/>
                                     </div>
                                 </div>
 
