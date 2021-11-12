@@ -29,7 +29,7 @@ const Register = () => {
         setLoading(true);
         dispatch(register(form))
             .then(() => {
-                return <Redirect to="/customer/home" />;
+                return <Redirect to="/foods" />;
             })
             .catch(() => {
                 setLoading(false);
@@ -37,7 +37,7 @@ const Register = () => {
 
     };
     if (isLoggedIn) {
-        return <Redirect to="/customer/home" />;
+        return <Redirect to="/foods" />;
     }
     return (
         <div className="hero min-h-screen bg-warning">

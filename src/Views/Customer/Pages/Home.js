@@ -44,7 +44,7 @@ const Home = () => {
                         </div>
                         <div className="relative h-full xl:flex items-center justify-end">
                             <div className="w-full h-full flex items-center">
-                                <div dclassName="flex-none">
+                                <div className="flex-none">
                                     <button ata-tip="Cart" className="btn btn-square btn-ghost tooltip tooltip-bottom">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                              className="inline-block w-6 h-6 stroke-current">
@@ -75,10 +75,10 @@ const Home = () => {
                 <div className="lg:container flex bg-yellow-200 lg:items-center justify-between w-1/2">
                     {/*tabs*/}
                     <div className="mr-10 flex items-left">
-                        <a href="/" className="relative text-base text-black font-mono font-bold ml-3 hover:text-white">Foods</a>
+                        <span className="underline relative text-base text-black font-mono font-bold ml-3">Foods</span>
                     </div>
                     <div className="mr-10 flex items-right">
-                        <a href="/" className="relative text-base text-black font-mono font-bold ml-3 hover:text-white">Drinks</a>
+                        <a href="/drinks" className="relative text-base text-black font-mono font-bold ml-3 hover:text-white">Drinks</a>
                     </div>
                     <div className="mt-6 lg:mt-0">
                         {/*    tabs 2  */}
@@ -94,11 +94,15 @@ const Home = () => {
                             <p>Rp. 12.000</p>
                             <div className="justify-center card-actions">
                                 <a href="#my-modal" className="btn btn-sm btn-accent">Buy</a>
-                                <div id="my-modal" className="modal">
-                                    <div className="modal-box">
+                                <div id="my-modal" className="modal bg-white">
+                                    <div className="modal-box bg-white">
                                         <div className="modal-action">
-                                            <a href="/components/modal#" className="btn btn-primary">Accept</a>
-                                            <a href="/home" className="btn">Close</a>
+                                            <p>Kalsium: 100</p>
+                                            <p>Minyak: 100</p>
+                                            <p>Zinc: 100</p>
+                                            <p>Vitamin: 100</p>
+                                            <button className="btn btn-primary">Buy</button>
+                                            <button onClick={handleClose} className="btn btn-error">Cancel</button>
                                         </div>
                                     </div>
                                 </div>
