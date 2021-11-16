@@ -1,13 +1,14 @@
 import '../App.css';
-import React, {useState, useRef} from "react";
+import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {Redirect} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import {login} from "../Actions/auth";
 
 const Login = () => {
     const initialState = {
         email: null,
         password: null,
+
     };
     const [form, setForm] = useState(initialState);
     const [loading, setLoading] = useState(false);
@@ -26,7 +27,8 @@ const Login = () => {
 
         dispatch(login(form))
             .then(() => {
-                return <Redirect to="/foods" />;
+                if(form.email === 'admin@gmail.com') return <Redirect to="/dashboard" />;
+                else return <Redirect to="/foods" />;
             })
             .catch(() => {
                 setLoading(false);
@@ -34,7 +36,8 @@ const Login = () => {
 
     };
     if (isLoggedIn) {
-        return <Redirect to="/foods" />;
+        if(form.email === 'admin@gmail.com') return <Redirect to="/dashboard" />;
+        else return <Redirect to="/foods" />;
     }
     return (
         <div className="hero min-h-screen bg-warning">
