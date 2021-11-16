@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import DeliveryDiningRoundedIcon from '@mui/icons-material/DeliveryDiningRounded';
@@ -10,15 +10,15 @@ const Home = () => {
     // const [product, setProduct] = useState(false);
     // const [deliverables, setDeliverables] = useState(false);
     // const [profile, setProfile] = useState(false);
-    const [open, setOpen] = React.useState(false);
+    // const [open, setOpen] = React.useState(false);
 
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
+    // const handleClickOpen = () => {
+    //     setOpen(true);
+    // };
 
-    const handleClose = () => {
-        setOpen(true);
-    };
+    // const handleClose = () => {
+    //     setOpen(true);
+    // };
 
     return (
         <div className="h-screen bg-white">
@@ -46,22 +46,28 @@ const Home = () => {
                             <div className="w-full h-full flex items-center">
                                 <div className="flex-none">
                                     <button ata-tip="Cart" className="btn btn-square btn-ghost tooltip tooltip-bottom">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                             className="inline-block w-6 h-6 stroke-current">
-                                            <ShoppingCartRoundedIcon/>
-                                        </svg>
+                                        <a href="/cart">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                 className="inline-block w-6 h-6 stroke-current">
+                                                <ShoppingCartRoundedIcon/>
+                                            </svg>
+                                        </a>
                                     </button>
                                     <button data-tip="Track Order" className="btn btn-square btn-ghost tooltip tooltip-bottom">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                             className="inline-block w-6 h-6 stroke-current">
-                                            <DeliveryDiningRoundedIcon/>
-                                        </svg>
+                                        <a href="/trackorder">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                 className="inline-block w-6 h-6 stroke-current">
+                                                <DeliveryDiningRoundedIcon/>
+                                            </svg>
+                                        </a>
                                     </button>
                                     <button data-tip="Account" className="btn btn-square btn-ghost tooltip tooltip-bottom">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                             className="inline-block w-6 h-6 stroke-current">
-                                            <AccountCircleRoundedIcon/>
-                                        </svg>
+                                        <a href="profile">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                 className="inline-block w-6 h-6 stroke-current">
+                                                <AccountCircleRoundedIcon/>
+                                            </svg>
+                                        </a>
                                     </button>
                                 </div>
                             </div>
@@ -102,7 +108,7 @@ const Home = () => {
                                             <p>Zinc: 100</p>
                                             <p>Vitamin: 100</p>
                                             <button className="btn btn-primary">Buy</button>
-                                            <button onClick={handleClose} className="btn btn-error">Cancel</button>
+                                            <button className="btn btn-error">Cancel</button>
                                         </div>
                                     </div>
                                 </div>
