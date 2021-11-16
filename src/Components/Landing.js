@@ -17,7 +17,7 @@ const Landing = () => {
                     <a href="/login" className="btn glass">
                         <p>Continue with Login</p>
                     </a>
-                    {/*<button href="/login" className="btn glass">Continue with Login</button>*/}
+                    {/*/!*<button href="/login" className="btn glass">Continue with Login</button>*!/*/}
                 </div>
             </div>
         </div>
