@@ -5,7 +5,7 @@ import '../../../App.css';
 
 export default function Order() {
 
-    const headers = ['No', 'Name', 'Menu', 'Qty', 'ShipCost', 'Total', 'Status'];
+    const headers = ['pembayaran_id', 'pengiriman_id', 'jenis_order', 'catatan'];
 
     return (
         <div className="md:container md:mx-auto">
