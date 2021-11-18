@@ -30,8 +30,7 @@ const Home = () => {
     // };
 
     return (
-        <div className="h-screen bg-white">
-            <div className="absolute bg-white w-full">
+        <div className="flex flex-col h-screen bg-white">
                 {/* Navigation starts */}
                 {/* Mobile */}
                 <nav className="w-full mx-auto bg-yellow-400 shadow">
@@ -104,7 +103,7 @@ const Home = () => {
                         <a href="/drinks" className="relative text-base text-black font-mono font-bold ml-3 hover:text-white">Drinks</a>
                     </div>
                 </div>
-                <div className="container bg-white py-30 flex flex-row items-center justify-center mx-auto px-6 grid gap-4 grid-cols-6">
+                <div className="container bg-white py-30 flex-grow-1 mx-auto px-6 grid gap-4 grid-cols-6">
                     <div className="card shadow-lg">
                         <figure className="px-5 pt-5">
                             <img src="https://www.rukita.co/stories/wp-content/uploads/2020/02/byurger.jpg" className="rounded-2xl" alt=""/>
@@ -352,7 +351,6 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </div>
             {/* Page title starts */}
             {/* Page title ends */}
             <Footer />
