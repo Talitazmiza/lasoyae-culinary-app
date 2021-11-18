@@ -6,6 +6,7 @@ import '../../../App.css';
 import LogoutIcon from "@mui/icons-material/Logout";
 import {useDispatch} from "react-redux";
 import {logout} from "../../../Actions/auth";
+import Footer from "../Components/Footer";
 
 const Home = () => {
 
@@ -53,7 +54,7 @@ const Home = () => {
                         <div className="relative h-full xl:flex items-center justify-end">
                             <div className="w-full h-full flex items-center">
                                 <div className="flex-none">
-                                    <button ata-tip="Cart" className="btn btn-square btn-ghost tooltip tooltip-bottom">
+                                    <button data-tip="Cart" className="btn btn-square btn-ghost tooltip tooltip-left">
                                         <a href="/cart">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                  className="inline-block w-6 h-6 stroke-current">
@@ -61,7 +62,7 @@ const Home = () => {
                                             </svg>
                                         </a>
                                     </button>
-                                    <button data-tip="Track Order" className="btn btn-square btn-ghost tooltip tooltip-bottom">
+                                    <button data-tip="Track Order" className="btn btn-square btn-ghost tooltip tooltip-left">
                                         <a href="/trackorder">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                              className="inline-block w-6 h-6 stroke-current">
@@ -69,7 +70,7 @@ const Home = () => {
                                         </svg>
                                         </a>
                                     </button>
-                                    <button data-tip="Account" className="btn btn-square btn-ghost tooltip tooltip-bottom">
+                                    <button data-tip="Account" className="btn btn-square btn-ghost tooltip tooltip-left">
                                         <a href="/profile">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                  className="inline-block w-6 h-6 stroke-current">
@@ -77,8 +78,8 @@ const Home = () => {
                                             </svg>
                                         </a>
                                     </button>
-                                    <button className="btn btn-square btn-ghost">
-                                        <a href="/login" onClick={logOut} className="btn btn-square btn-ghost">
+                                    <button data-tip="Logout" onClick={logOut} className="btn btn-square btn-ghost tooltip tooltip-left">
+                                        <a href="/login">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                  className="inline-block w-6 h-6 stroke-current">
                                                 <LogoutIcon/>
@@ -94,16 +95,13 @@ const Home = () => {
                     </div>
                 </nav>
                 {/* Navigation ends */}
-                <div className="lg:container flex bg-yellow-200 lg:items-center justify-between w-1/2">
-                    {/*tabs*/}
-                    <div className="mr-10 flex items-left">
+                <div className="flex flex-row w-full bg-yellow-200">
+                    <div className="grid flex-grow h-10 card place-items-center bg-yellow-200">
                         <span className="underline relative text-base text-black font-mono font-bold ml-3">Foods</span>
                     </div>
-                    <div className="mr-10 flex items-right">
+                    <div className="divider divider-vertical"></div>
+                    <div className="grid flex-grow h-10 card place-items-center bg-yellow-200">
                         <a href="/drinks" className="relative text-base text-black font-mono font-bold ml-3 hover:text-white">Drinks</a>
-                    </div>
-                    <div className="mt-6 lg:mt-0">
-                        {/*    tabs 2  */}
                     </div>
                 </div>
                 <div className="container bg-white py-30 flex flex-row items-center justify-center mx-auto px-6 grid gap-4 grid-cols-6">
@@ -357,6 +355,7 @@ const Home = () => {
             </div>
             {/* Page title starts */}
             {/* Page title ends */}
+            <Footer />
         </div>
     );
 };
