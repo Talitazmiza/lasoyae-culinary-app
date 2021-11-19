@@ -30,36 +30,36 @@ export default function Navbar() {
                         <div className="w-full h-full flex items-center">
                             <div className="flex-none">
                                 <button data-tip="Cart" className="btn btn-square btn-ghost tooltip tooltip-bottom">
-                                    <a href="/cart">
+                                    <Link to="/cart">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                              className="inline-block w-6 h-6 stroke-current">
                                             <ShoppingCartRoundedIcon/>
                                         </svg>
-                                    </a>
+                                    </Link>
                                 </button>
                                 <button data-tip="Track Order" className="btn btn-square btn-ghost tooltip tooltip-bottom">
-                                    <a href="/trackorder">
+                                    <Link to="/trackorder">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                              className="inline-block w-6 h-6 stroke-current">
                                             <DeliveryDiningRoundedIcon/>
                                         </svg>
-                                    </a>
+                                    </Link>
                                 </button>
                                 <button data-tip="Account" className="btn btn-square btn-ghost tooltip tooltip-bottom">
-                                    <a href="profile">
+                                    <Link to="profile">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                              className="inline-block w-6 h-6 stroke-current">
                                             <AccountCircleRoundedIcon/>
                                         </svg>
-                                    </a>
+                                    </Link>
                                 </button>
                                 <button onClick={logOut}  data-tip="Logout" className="btn btn-square btn-ghost tooltip tooltip-bottom">
-                                    <a href="/login">
+                                    <Link to="/login">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         className="inline-block w-6 h-6 stroke-current">
                                             <LogoutIcon/>
                                         </svg>
-                                    </a>
+                                    </Link>
                                 </button>
                             </div>
                         </div>
