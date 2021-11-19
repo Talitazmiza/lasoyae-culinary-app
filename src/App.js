@@ -13,7 +13,7 @@ import CustomerDrinks from './Views/Customer/Pages/HomeDrinks';
 import TrackOrder from './Views/Customer/Pages/TrackOrder';
 import Cart from './Views/Customer/Pages/Cart';
 import Profile from './Views/Customer/Pages/Profile';
-
+import EditProfile from "./Views/Customer/Pages/EditProfile";
 
 function App() {
     return (
@@ -35,6 +35,7 @@ function App() {
                     <Route path="/trackorder" exact component={TrackOrder} />
                     <Route path="/cart" exact component={Cart} />
                     <Route path="/profile" exact component={Profile} />
+                    <Route path="/profile/edit" exact component={EditProfile} />
                 </Switch>
             </BrowserRouter>
         </div>
