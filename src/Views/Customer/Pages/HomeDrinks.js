@@ -6,6 +6,7 @@ import '../../../App.css';
 import LogoutIcon from "@mui/icons-material/Logout";
 import {useDispatch} from "react-redux";
 import {logout} from "../../../Actions/auth";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -95,7 +96,7 @@ const Home = () => {
                 {/* Navigation ends */}
                 <div className="flex flex-row w-full bg-yellow-200">
                     <div className="grid flex-grow h-10 card place-items-center bg-yellow-200">
-                        <a href="/foods" className="relative text-base text-black font-mono font-bold ml-3 hover:text-white">Foods</a>
+                        <Link to="/foods" className="relative text-base text-black font-mono font-bold ml-3 hover:text-white">Foods</Link>
                     </div>
                     <div className="divider divider-vertical"></div>
                     <div className="grid flex-grow h-10 card place-items-center bg-yellow-200">

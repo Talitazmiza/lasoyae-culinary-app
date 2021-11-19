@@ -7,6 +7,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import {useDispatch} from "react-redux";
 import {logout} from "../../../Actions/auth";
 import Footer from "../Components/Footer";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -37,7 +38,7 @@ const Home = () => {
                     <div className="container px-6 justify-between h-16 flex items-center lg:items-stretch mx-auto">
                         <div className="h-full flex items-center">
                             <div className="mr-10 flex items-center">
-                                <a href="/" className="relative no-underline text-base text-white font-bold tracking-normal leading-tight ml-3">LASOYAE</a>
+                                <Link to="/" className="relative no-underline text-base text-white font-bold tracking-normal leading-tight ml-3">LASOYAE</Link>
                             </div>
                             <div className="relative w-full flex justify-center">
                                 <div className="text-gray-500 absolute ml-3 inset-0 m-auto w-4 h-4">
@@ -54,12 +55,12 @@ const Home = () => {
                             <div className="w-full h-full flex items-center">
                                 <div className="flex-none">
                                     <button data-tip="Cart" className="btn btn-square btn-ghost tooltip tooltip-left">
-                                        <a href="/cart">
+                                        <Link to="/cart">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                  className="inline-block w-6 h-6 stroke-current">
                                                 <ShoppingCartRoundedIcon/>
                                             </svg>
-                                        </a>
+                                        </Link>
                                     </button>
                                     <button data-tip="Track Order" className="btn btn-square btn-ghost tooltip tooltip-left">
                                         <a href="/trackorder">
@@ -100,7 +101,7 @@ const Home = () => {
                     </div>
                     <div className="divider divider-vertical"></div>
                     <div className="grid flex-grow h-10 card place-items-center bg-yellow-200">
-                        <a href="/drinks" className="relative text-base text-black font-mono font-bold ml-3 hover:text-white">Drinks</a>
+                        <Link to="/drinks" className="relative text-base text-black font-mono font-bold ml-3 hover:text-white">Drinks</Link>
                     </div>
                 </div>
                 <div className="container bg-white py-30 flex-grow-1 mx-auto px-6 grid gap-4 grid-cols-6">
@@ -120,8 +121,8 @@ const Home = () => {
                                             <p>Minyak: 100</p>
                                             <p>Zinc: 100</p>
                                             <p>Vitamin: 100</p>
-                                            <button className="btn btn-primary">Buy</button>
-                                            <button className="btn btn-error">Cancel</button>
+                                            <a className="btn btn-primary">Buy</a>
+                                            <a href="#" className="btn btn-error">Cancel</a>
                                         </div>
                                     </div>
                                 </div>

@@ -6,10 +6,9 @@ import CartContent from "../Components/CartContent";
 
 export default function Cart() {
     return (
-        <div className="h-screen bg-white">
+        <div className="h-screen bg-white flex flex-col">
             <Navbar />
             <CartContent />
-            <Footer />
         </div>
     );
 };

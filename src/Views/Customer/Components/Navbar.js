@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import DeliveryDiningRoundedIcon from "@mui/icons-material/DeliveryDiningRounded";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
+import {Link} from "react-router-dom";
 
 
 export default function Navbar() {
@@ -21,7 +22,8 @@ export default function Navbar() {
                 <div className="container px-6 justify-between h-16 flex items-center lg:items-stretch mx-auto">
                     <div className="h-full flex items-center">
                         <div className="mr-10 flex items-center">
-                            <a href="/" className="relative no-underline text-base text-white font-bold tracking-normal leading-tight ml-3">LA SOYAE</a>
+                            <Link to="/" className="relative no-underline text-base text-white font-bold tracking-normal leading-tight ml-3">LA SOYAE</Link>
+                            <Link to="/foods" className="relative no-underline text-base text-white font-bold tracking-normal leading-tight ml-3">Home</Link>
                         </div>
                     </div>
                     <div className="relative h-full xl:flex items-center justify-end">
