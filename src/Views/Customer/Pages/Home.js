@@ -3,18 +3,12 @@ import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import DeliveryDiningRoundedIcon from '@mui/icons-material/DeliveryDiningRounded';
 import '../../../App.css';
-import LogoutIcon from "@mui/icons-material/Logout";
-import {useDispatch} from "react-redux";
-import {logout} from "../../../Actions/auth";
 import Footer from "../Components/Footer";
 import { Link } from 'react-router-dom';
+import Navbar from "../Components/Navbar";
 
 const Home = () => {
 
-    const dispatch = useDispatch();
-    const logOut = () => {
-        dispatch(logout())
-    };
 
     // const [show, setShow] = useState(false);
     // const [product, setProduct] = useState(false);
@@ -34,66 +28,7 @@ const Home = () => {
         <div className="flex flex-col h-screen bg-white">
                 {/* Navigation starts */}
                 {/* Mobile */}
-                <nav className="w-full mx-auto bg-yellow-400 shadow">
-                    <div className="container px-6 justify-between h-16 flex items-center lg:items-stretch mx-auto">
-                        <div className="h-full flex items-center">
-                            <div className="mr-10 flex items-center">
-                                <Link to="/" className="relative no-underline text-base text-white font-bold tracking-normal leading-tight ml-3">LASOYAE</Link>
-                            </div>
-                            <div className="relative w-full flex justify-center">
-                                <div className="text-gray-500 absolute ml-3 inset-0 m-auto w-4 h-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-search" width={16} height={16} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" />
-                                        <circle cx={10} cy={10} r={7} />
-                                        <line x1={21} y1={21} x2={15} y2={15} />
-                                    </svg>
-                                </div>
-                                <input className="border border-gray-100 focus:outline-none focus:border-indigo-700 w-56 rounded text-sm text-gray-500 bg-gray-100 pl-8 py-2" type="text" placeholder="Search" />
-                            </div>
-                        </div>
-                        <div className="relative h-full xl:flex items-center justify-end">
-                            <div className="w-full h-full flex items-center">
-                                <div className="flex-none">
-                                    <button data-tip="Cart" className="btn btn-square btn-ghost tooltip tooltip-left">
-                                        <Link to="/cart">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                 className="inline-block w-6 h-6 stroke-current">
-                                                <ShoppingCartRoundedIcon/>
-                                            </svg>
-                                        </Link>
-                                    </button>
-                                    <button data-tip="Track Order" className="btn btn-square btn-ghost tooltip tooltip-left">
-                                        <a href="/trackorder">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                             className="inline-block w-6 h-6 stroke-current">
-                                            <DeliveryDiningRoundedIcon/>
-                                        </svg>
-                                        </a>
-                                    </button>
-                                    <button data-tip="Account" className="btn btn-square btn-ghost tooltip tooltip-left">
-                                        <a href="/profile">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                 className="inline-block w-6 h-6 stroke-current">
-                                                <AccountCircleRoundedIcon/>
-                                            </svg>
-                                        </a>
-                                    </button>
-                                    <button data-tip="Logout" onClick={logOut} className="btn btn-square btn-ghost tooltip tooltip-left">
-                                        <a href="/login">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                 className="inline-block w-6 h-6 stroke-current">
-                                                <LogoutIcon/>
-                                            </svg>
-                                        </a>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="visible xl:hidden flex items-center relative">
-                            {/*center navbar*/}
-                        </div>
-                    </div>
-                </nav>
+                <Navbar/>
                 {/* Navigation ends */}
                 <div className="flex flex-row w-full bg-yellow-200">
                     <div className="grid flex-grow h-10 card place-items-center bg-yellow-200">
@@ -104,7 +39,7 @@ const Home = () => {
                         <Link to="/drinks" className="relative text-base text-black font-mono font-bold ml-3 hover:text-white">Drinks</Link>
                     </div>
                 </div>
-                <div className="container bg-white py-30 flex-grow-1 mx-auto px-6 grid gap-4 grid-cols-6">
+                <div className="container bg-white py-30 flex-grow-1 mx-auto px-6 grid gap-4 lg:grid-cols-6 xl:grid-cols-6 md:grid-cols-3 sm:grid-cols-2">
                     <div className="card shadow-lg">
                         <figure className="px-5 pt-5">
                             <img src="https://www.rukita.co/stories/wp-content/uploads/2020/02/byurger.jpg" className="rounded-2xl" alt=""/>
@@ -352,9 +287,9 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            {/* Page title starts */}
-            {/* Page title ends */}
-            <Footer />
+                {/* Page title starts */}
+                {/* Page title ends */}
+                <Footer />
         </div>
     );
 };
