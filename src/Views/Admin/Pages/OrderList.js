@@ -5,7 +5,7 @@ import Footer from "../Components/Footer";
 
 export default function OrderList() {
     return (
-      <div className="h-screen bg-white">
+      <div className="flex flex-col h-screen bg-white">
           <Navbar />
           <Order />
           <Footer />

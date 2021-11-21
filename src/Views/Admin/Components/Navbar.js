@@ -3,6 +3,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import MenuIcon from '@mui/icons-material/Menu';
 import { logout } from "../../../Actions/auth";
 import { useDispatch } from "react-redux";
+import {Link} from "react-router-dom";
 
 export default function Navbar() {
 
@@ -12,7 +13,7 @@ export default function Navbar() {
     };
 
     return (
-        <div className="navbar mb-2 shadow-lg bg-neutral text-neutral-content">
+        <div className="navbar mb-2 flex-none shadow-lg bg-neutral text-neutral-content">
             <div className="px-2 mx-2 navbar-start">
                 <div className="dropdown dropdown-right dropdown-hover">
                     <div tabIndex="0" className="btn btn-ghost rounded-btn">
@@ -20,10 +21,10 @@ export default function Navbar() {
                     </div>
                     <ul tabIndex="0" className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
                         <li>
-                            <a href="/orderlist">Go to Order List</a>
+                            <Link to="/orderlist">Go to Order List</Link>
                         </li>
                         <li>
-                            <a href="/dashboard">Go to Manage Stock</a>
+                            <Link to="/dashboard">Go to Manage Stock</Link>
                         </li>
                     </ul>
                 </div>
