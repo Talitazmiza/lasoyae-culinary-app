@@ -1,3 +1,13 @@
+Overview La Soyae
+
+![image](https://user-images.githubusercontent.com/54302300/159838590-7e18c3bb-71f2-4a5b-9419-a064b62c5048.png)
+![image](https://user-images.githubusercontent.com/54302300/159838679-68355f67-225e-419c-b0fc-df6386dd86c4.png)
+![image](https://user-images.githubusercontent.com/54302300/159838760-b603c058-4ab4-498f-a7b1-8433af6dcc30.png)
+![image](https://user-images.githubusercontent.com/54302300/159838784-4636e519-0cc6-418d-9506-f1eeb0f885f7.png)
+![image](https://user-images.githubusercontent.com/54302300/159838851-9acef1c4-da03-413c-a957-92bb0477c9aa.png)
+
+
+
 # Getting Started with Create React App
 
 1. install tailwindcss in ReactJS 
@@ -86,3 +96,5 @@ if your **caniuse-lite is oudated** please run:
 
 `npx browserslist@latest --update-db`
   
+for server side please check out in 
+https://github.com/dianasaurus-debug/lasoyae-backend
